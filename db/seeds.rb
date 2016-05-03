@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-350_000.times do |i|
+(350_000 - 265580).times do |i|
+  i += 265580
   Customer.create! first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "#{Faker::Internet.user_name}#{i}@#{Faker::Internet.domain_name}", username: "#{Faker::Internet.user_name}#{i}"
 end

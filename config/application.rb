@@ -32,5 +32,9 @@ module Shine
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.active_record.schema_format = :sql
+
+    config.autoload_paths += %W(#{config.root}/lib #{config.root}/app/decorators
+      #{config.root}/app/services #{config.root}/app/presenters
+      #{config.root}/app/queries)
   end
 end
