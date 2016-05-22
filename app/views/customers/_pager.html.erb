@@ -1,0 +1,6 @@
+<nav>
+  <ul class="pager">
+    <li class="previous<%= " disabled" if page == 0 %>"><%= link_to '<span aria-hidden="true">&larr;</span> Previous'.html_safe, customers_path(page: page - 1, keywords: keywords) %></li>
+    <li class="next"><%= link_to 'Next <span aria-hidden="true">&rarr;</span>'.html_safe, customers_path(page: page + 1, keywords: keywords) %></li>
+  </ul>
+</nav>
